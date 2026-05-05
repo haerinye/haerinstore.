@@ -117,4 +117,123 @@
     </footer>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAERIN STORE | PREMIUM APP SUBSCRIPTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        
+        body {
+            /* Menggunakan warna solid pink muda sebagai cadangan jika gambar gagal */
+            background-color: #FFD1DC;
+            /* Link gambar baru yang lebih stabil */
+            background-image: url('https://i.pinimg.com/originals/8e/0d/a1/8e0da1707fdb144129cf2ecaa548475d.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Overlay agar teks tetap terbaca meskipun background ramai */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.3); 
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .logo-wrapper {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 25px 50px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 3px solid #FFD1DC;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        h1 { margin: 0; color: #e58a9d; letter-spacing: 4px; font-weight: 700; font-size: 2.5rem; }
+        p { margin: 5px 0 0; color: #b08d96; font-weight: 700; letter-spacing: 1px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.9); }
+
+        .app-name { display: block; font-size: 1.8rem; color: #e58a9d; font-weight: 700; margin-bottom: 10px; }
+        .price-box { border-top: 1px solid #FFD1DC; padding-top: 10px; color: #777; }
+        .price-box b { display: block; font-size: 1.3rem; color: #e58a9d; margin-top: 5px; }
+
+        footer { margin-top: 50px; display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 350px; }
+        
+        .btn {
+            background: #fff;
+            color: #e58a9d;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            border: 2px solid #FFD1DC;
+        }
+
+        .btn:hover { background: #FFD1DC; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-wrapper">
+            <h1>HAERIN STORE</h1>
+            <p>PREMIUM APP SUBSCRIPTION</p>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <div class="card"><span class="app-name">Canva Pro</span><div class="price-box">Lifetime <b>Rp 5.000</b></div></div>
+        <div class="card"><span class="app-name">YouTube Premium</span><div class="price-box">1 Bulan <b>Rp 2.500</b></div></div>
+        <div class="card"><span class="app-name">Apple Music</span><div class="price-box">1 Bulan <b>Rp 10.000</b></div></div>
+        <div class="card"><span class="app-name">Alight Motion</span><div class="price-box">1 Tahun <b>Rp 1.000</b></div></div>
+        <div class="card"><span class="app-name">PicsArt Pro</span><div class="price-box">Private <b>Rp 5.000</b></div></div>
+        <div class="card"><span class="app-name">CapCut Pro</span><div class="price-box">35 Hari <b>Rp 8.000</b></div></div>
+        <div class="card"><span class="app-name">B-Station</span><div class="price-box">Sharing <b>Rp 5.000</b></div></div>
+    </div>
+
+    <footer>
+        <a href="https://wa.me/628886179455" class="btn">Order via WhatsApp</a>
+        <a href="https://discordapp.com/users/915234567890123456" target="_blank" class="btn">user hearinye</a>
+    </footer>
+
+</body>
 </html>
