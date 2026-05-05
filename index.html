@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haerin Store | Pricelist Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-bg: #fff0f6;
+            --pink-soft: #ffdeeb;
+            --pink-dark: #f06292;
+            --text-color: #5d4037;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            background-color: var(--pink-bg);
+            background-image: radial-gradient(#ffc0cb 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-container {
+            background: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: 4px dashed var(--pink-dark);
+            box-shadow: 6px 6px 0px var(--pink-soft);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--pink-dark);
+            letter-spacing: 2px;
+        }
+
+        p.subtitle {
+            margin-top: 10px;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        /* Container Pricelist */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(240, 98, 146, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--pink-dark);
+        }
+
+        .app-name {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--pink-soft);
+        }
+
+        .price-info {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .price-info b {
+            color: #d81b60;
+            background: var(--pink-soft);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        /* Footer / Kontak */
+        footer {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-contact {
+            background: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            border: 2px solid var(--pink-dark);
+            transition: 0.3s;
+            box-shadow: 4px 4px 0px var(--pink-dark);
+        }
+
+        .btn-contact:hover {
+            background: var(--pink-dark);
+            color: white;
+            box-shadow: none;
+            transform: translate(2px, 2px);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.5rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <h1>HAERIN STORE</h1>
+        </div>
+        <p class="subtitle">✨ Premium App Subscription ✨</p>
+    </header>
+
+    <div class="grid-container">
+        <div class="card">
+            <span class="app-name">Canva Pro</span>
+            <div class="price-info">Lifetime: <b>Rp 5.000</b></div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">YouTube Premium</span>
+            <div class="price-info">1 Bulan: <b>Rp 2.500</b></div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">Apple Music</span>
+            <div class="price-info">1 Bulan: <b>Rp 10.000</b></div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">Alight Motion</span>
+            <div class="price-info">
+                1 Tahun: <b>Rp 1.000</b><br>
+                3-6 Bulan: <b>Rp 500</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">PicsArt Pro</span>
+            <div class="price-info">
+                Private: <b>Rp 5.000</b><br>
+                Sharing: <b>Rp 2.500</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">CapCut Pro</span>
+            <div class="price-info">
+                7 Hari: <b>Rp 5.000</b><br>
+                35 Hari: <b>Rp 8.000</b>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="app-name">B-Station</span>
+            <div class="price-info">
+                Sharing: <b>Rp 5.000</b><br>
+                1 Tahun: <b>Rp 20.000</b>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://wa.me/628886179455" class="btn-contact">💬 Hubungi via WhatsApp</a>
+        <a href="#" class="btn-contact">🎮 Discord: @xxi.lq</a>
+    </footer>
+
+</body>
+</html>
