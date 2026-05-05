@@ -3,371 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAERIN STORE | Premium App Subscription</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>HAERIN STORE | PREMIUM APP SUBSCRIPTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            /* Palet warna yang disesuaikan dengan Giphy */
-            --giphy-sakura-pink: #ffdae1; 
-            --giphy-light-blue: #cce9ff; 
-            --giphy-pastel-purple: #e2d2ff; 
-            --giphy-sky-blue: #0088cc; 
-            --text-dark-brown: #7c5c64; 
-            --accent-pink: #ff69b4; 
-        }
-
-        * {
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        
         body {
-            /* MENGGUNAKAN GIPHY SEBAGAI BACKGROUND JAUH LEBIH HIDUP */
-            background-image: url('https://media.giphy.com/media/image_5.png');
+            /* MENGGUNAKAN GIPHY SEBAGAI BACKGROUND */
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHI3Z2Z3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3ZnZ3/8e0da1707fdb144129cf2ecaa548475d/giphy.gif');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: var(--text-dark-brown);
             margin: 0;
-            padding: 60px 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             font-family: 'Quicksand', sans-serif;
-            position: relative;
+            min-height: 100vh;
         }
 
-        /* Layer transparansi agar background tidak terlalu mengganggu teks */
+        /* Overlay transparan agar teks tetap terbaca jelas */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(255, 234, 238, 0.4); /* Transparansi pink lembut */
+            background: rgba(255, 230, 240, 0.3); 
             z-index: -1;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+            width: 100%;
         }
 
         .logo-wrapper {
-            background: rgba(255, 255, 255, 0.7); /* Transparansi glassmorphism */
-            backdrop-filter: blur(8px);
-            padding: 25px 60px;
-            border-radius: 100px;
-            border: 2px solid var(--giphy-light-blue);
-            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
-        }
-
-        header h1 {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 3.5rem;
-            margin: 0;
-            color: #d81b60; /* Pink cerah sesuai warna anime */
-            font-weight: 700;
-            letter-spacing: 3px; /* Jarak antar huruf agar estetik */
-        }
-
-        header p {
-            font-family: 'Quicksand', sans-serif;
-            font-size: 1.3rem;
-            margin-top: 5px;
-            opacity: 0.9;
-            font-weight: 600;
-            color: var(--giphy-pastel-purple); /* Menggunakan warna ungu muda dari GIF */
-            letter-spacing: 1px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        /* Efek Glassmorphism yang serasi dengan background Giphy */
-        .card {
-            background: rgba(255, 255, 255, 0.4); 
-            backdrop-filter: blur(12px); /* Efek Blur Kaca yang lebih kuat */
-            -webkit-backdrop-filter: blur(12px);
-            border-radius: 25px;
-            padding: 30px;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 10px 25px rgba(204, 233, 255, 0.2); /* Bayangan biru pastel */
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.7);
-            border-color: var(--giphy-sakura-pink);
-            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
-        }
-
-        .app-name {
-            display: block;
-            font-family: 'Quicksand', sans-serif;
-            font-size: 2.2rem;
-            color: #d81b60;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .price-box {
-            font-size: 1.1rem;
-            border-top: 2px solid rgba(255, 182, 193, 0.4);
-            padding-top: 15px;
-            color: var(--text-dark-brown);
-            font-weight: 600;
-        }
-
-        .price-box b {
-            font-size: 1.4rem;
-            color: #d81b60;
-            display: block;
-            margin-top: 8px;
-        }
-
-        footer {
-            margin-top: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .btn-coquette {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            color: var(--giphy-sky-blue); /* Menggunakan warna biru dari No. 1 Club di GIF */
-            text-decoration: none;
-            padding: 18px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
             border-radius: 50px;
-            font-weight: 700;
-            text-align: center;
-            border: 2px solid var(--giphy-light-blue);
-            font-size: 1rem;
-            letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(0, 136, 204, 0.2);
+            display: inline-block;
+            border: 2px solid #ffb6c1;
         }
 
-        .btn-coquette:hover {
-            background: var(--giphy-sky-blue);
-            color: white;
-            transform: scale(1.05);
-            border-color: var(--giphy-sky-blue);
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.5rem; letter-spacing: 2px; }
-            header p { font-size: 1.1rem; }
-            .logo-wrapper { padding: 15px 40px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo-wrapper">
-            <h1>HAERIN STORE</h1>
-            <p>PREMIUM APP SUBSCRIPTION</p>
-        </div>
-    </header>
-
-    <div class="grid-container">
-        <div class="card">
-            <span class="app-name">Canva Pro</span>
-            <div class="price-box">Lifetime <b>Rp 5.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">YouTube Premium</span>
-            <div class="price-box">1 Bulan <b>Rp 2.500</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">Apple Music</span>
-            <div class="price-box">1 Bulan <b>Rp 10.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">Alight Motion</span>
-            <div class="price-box">1 Tahun <b>Rp 1.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">PicsArt Pro</span>
-            <div class="price-box">Private <b>Rp 5.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">CapCut Pro</span>
-            <div class="price-box">35 Hari <b>Rp 8.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">B-Station</span>
-            <div class="price-box">Sharing <b>Rp 5.000</b></div>
-        </div>
-    </div>
-
-    <footer>
-        <a href="https://wa.me/628886179455" class="btn-coquette">Order via WhatsApp</a>
-        <a href="https://discordapp.com/users/hearinye" target="_blank" class="btn-coquette">user hearinye</a>
-    </footer>
-
-    <div style="margin-top: 50px; font-style: italic; font-size: 1rem; opacity: 0.8; color: var(--giphy-sakura-pink); font-weight: 600; text-shadow: 1px 1px 0px rgba(0,0,0,0.2);">
-        lovely prices for lovely people
-    </div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAERIN STORE | PREMIUM APPS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --soft-pink: #fff0f5; 
-            --coquette-pink: #ffb6c1; 
-            --ribbon-pink: #ff69b4; 
-            --lace-white: #ffffff;
-            --text-brown: #8b5e66; 
-        }
-
-        * {
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        body {
-            background-color: var(--soft-pink);
-            /* Pola titik halus di background */
-            background-image: radial-gradient(var(--coquette-pink) 0.8px, transparent 0.8px);
-            background-size: 24px 24px;
-            color: var(--text-brown);
-            margin: 0;
-            padding: 60px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        /* Nama Store Polos & Elegan */
-        .logo-wrapper {
-            background: var(--lace-white);
-            padding: 20px 60px;
-            border-radius: 100px;
-            border: 1px solid var(--coquette-pink);
-            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2);
-        }
-
-        header h1 {
-            font-family: 'Dancing Script', cursive; /* Font cantik tetap ada */
-            font-size: 3.5rem;
-            margin: 0;
-            color: var(--ribbon-pink);
-        }
-
-        header p {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-top: 5px;
-            opacity: 0.8;
-        }
+        h1 { margin: 0; color: #d81b60; letter-spacing: 4px; font-weight: 700; font-size: 2.5rem; }
+        p { margin: 5px 0 0; color: #8b5e66; font-weight: 600; letter-spacing: 1px; }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 20px;
             max-width: 1000px;
             width: 100%;
         }
 
-        /* Efek Glassmorphism (Kaca Transparan) */
         .card {
-            background: rgba(255, 255, 255, 0.5); /* Transparan */
-            backdrop-filter: blur(10px); /* Efek Blur Kaca */
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 25px;
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        /* Animasi saat kursor menyentuh kotak */
-        .card:hover {
-            transform: translateY(-8px); /* Efek melayang */
+        .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.8); }
+
+        .app-name { display: block; font-size: 1.8rem; color: #d81b60; font-weight: 700; margin-bottom: 10px; }
+        .price-box { border-top: 1px solid rgba(216, 27, 96, 0.2); padding-top: 10px; color: #555; }
+        .price-box b { display: block; font-size: 1.3rem; color: #d81b60; margin-top: 5px; }
+
+        footer { margin-top: 50px; display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 350px; }
+        
+        .btn {
             background: rgba(255, 255, 255, 0.8);
-            border-color: var(--coquette-pink);
-            box-shadow: 0 12px 25px rgba(255, 105, 180, 0.2);
-        }
-
-        .app-name {
-            display: block;
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            color: var(--ribbon-pink);
-            margin-bottom: 15px;
-        }
-
-        .price-box {
-            font-size: 1rem;
-            border-top: 1px solid rgba(255, 182, 193, 0.3);
-            padding-top: 15px;
-        }
-
-        .price-box b {
-            font-size: 1.2rem;
-            color: var(--ribbon-pink);
-            display: block;
-            margin-top: 5px;
-        }
-
-        footer {
-            margin-top: 60px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .btn-coquette {
-            background: var(--lace-white);
-            color: var(--ribbon-pink);
+            color: #d81b60;
             text-decoration: none;
             padding: 15px;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
-            border: 1px solid var(--coquette-pink);
-            font-size: 0.9rem;
+            border: 2px solid #ffb6c1;
         }
 
-        .btn-coquette:hover {
-            background: var(--ribbon-pink);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.8rem; }
-        }
+        .btn:hover { background: #d81b60; color: white; }
     </style>
 </head>
 <body>
@@ -380,50 +100,19 @@
     </header>
 
     <div class="grid-container">
-        <div class="card">
-            <span class="app-name">Canva Pro</span>
-            <div class="price-box">Lifetime <b>Rp 5.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">YouTube Premium</span>
-            <div class="price-box">1 Bulan <b>Rp 2.500</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">Apple Music</span>
-            <div class="price-box">1 Bulan <b>Rp 10.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">Alight Motion</span>
-            <div class="price-box">1 Tahun <b>Rp 1.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">PicsArt Pro</span>
-            <div class="price-box">Private <b>Rp 5.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">CapCut Pro</span>
-            <div class="price-box">35 Hari <b>Rp 8.000</b></div>
-        </div>
-
-        <div class="card">
-            <span class="app-name">B-Station</span>
-            <div class="price-box">Sharing <b>Rp 5.000</b></div>
-        </div>
+        <div class="card"><span class="app-name">Canva Pro</span><div class="price-box">Lifetime <b>Rp 5.000</b></div></div>
+        <div class="card"><span class="app-name">YouTube Premium</span><div class="price-box">1 Bulan <b>Rp 2.500</b></div></div>
+        <div class="card"><span class="app-name">Apple Music</span><div class="price-box">1 Bulan <b>Rp 10.000</b></div></div>
+        <div class="card"><span class="app-name">Alight Motion</span><div class="price-box">1 Tahun <b>Rp 1.000</b></div></div>
+        <div class="card"><span class="app-name">PicsArt Pro</span><div class="price-box">Private <b>Rp 5.000</b></div></div>
+        <div class="card"><span class="app-name">CapCut Pro</span><div class="price-box">35 Hari <b>Rp 8.000</b></div></div>
+        <div class="card"><span class="app-name">B-Station</span><div class="price-box">Sharing <b>Rp 5.000</b></div></div>
     </div>
 
     <footer>
-        <a href="https://wa.me/628886179455" class="btn-coquette">Order via WhatsApp</a>
-        <a href="#" class="btn-coquette">Discord: @harinye</a>
+        <a href="https://wa.me/628886179455" class="btn">Order via WhatsApp</a>
+        <a href="https://discordapp.com/users/hearinye" target="_blank" class="btn">user hearinye</a>
     </footer>
-
-    <div style="margin-top: 40px; font-style: italic; font-size: 0.8rem; opacity: 0.5;">
-        lovely prices for lovely people
-    </div>
 
 </body>
 </html>
