@@ -236,6 +236,233 @@
         * { box-sizing: border-box; transition: all 0.3s ease; }
         
         body {
+            background-color: #FFD1DC;
+            background-image: url('https://i.pinimg.com/originals/8e/0d/a1/8e0da1707fdb144129cf2ecaa548475d.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.2); 
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .logo-wrapper {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 3px solid #FFD1DC;
+            box-shadow: 0 8px 20px rgba(255, 209, 220, 0.4);
+        }
+
+        h1 { margin: 0; color: #e58a9d; letter-spacing: 3px; font-weight: 700; font-size: 2.2rem; text-transform: uppercase; }
+        p { margin: 5px 0 0; color: #b08d96; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .app-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            margin-right: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .info { flex: 1; text-align: left; }
+
+        .app-name { 
+            display: block; 
+            font-size: 1.4rem; 
+            color: #e58a9d; 
+            font-weight: 700; 
+            margin-bottom: 5px; 
+            font-family: sans-serif;
+        }
+
+        .price-list { 
+            font-size: 0.85rem; 
+            color: #666; 
+            line-height: 1.4;
+            border-top: 1px solid #FFD1DC;
+            padding-top: 5px;
+        }
+
+        .price-list b { color: #e58a9d; font-weight: 700; }
+
+        footer { 
+            margin-top: 40px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            width: 100%; 
+            max-width: 400px; 
+        }
+        
+        .btn {
+            background: white;
+            color: #e58a9d;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            border: 2px solid #FFD1DC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn:hover { background: #FFD1DC; color: white; transform: scale(1.02); }
+
+        .btn img { width: 24px; height: 24px; }
+
+        @media (max-width: 600px) {
+            .grid-container { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-wrapper">
+            <h1>HAERIN STORE</h1>
+            <p>PREMIUM APP SUBSCRIPTION</p>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg" class="app-icon">
+            <div class="info">
+                <span class="app-name">Canva Pro</span>
+                <div class="price-list">(LIFETIME) : <b>Rp 5.000</b></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="app-icon">
+            <div class="info">
+                <span class="app-name">YouTube Premium</span>
+                <div class="price-list">1 Bulan : <b>Rp 2.500</b></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="app-icon" style="background:#fff; padding:10px;">
+            <div class="info">
+                <span class="app-name">Apple Music</span>
+                <div class="price-list">1 Bulan : <b>Rp 10.000</b></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://play-lh.googleusercontent.com/CHm_unv9m8_TBa9sS6S996uU0B69m5Z6Kk-vj0K8u6fS6v_X_V3-3v8X6B7Q-2-6Gg" class="app-icon">
+            <div class="info">
+                <span class="app-name">Alight Motion</span>
+                <div class="price-list">
+                    1 Tahun : <b>Rp 1.000</b><br>
+                    3-6 Bulan : <b>Rp 500</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Picsart_logo.svg" class="app-icon">
+            <div class="info">
+                <span class="app-name">PicsArt Pro</span>
+                <div class="price-list">
+                    Private (1 Bln) : <b>Rp 5.000</b><br>
+                    Sharing (1 Bln) : <b>Rp 2.500</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://play-lh.googleusercontent.com/yv9xZ_v8S6rB8g8-hY7B9D7E8F-G6H5I4J3K2L1M0N9O8P7Q6R5S4T3U2V1W0X1Y2Z" class="app-icon">
+            <div class="info">
+                <span class="app-name">CapCut Pro</span>
+                <div class="price-list">
+                    7 Hari : <b>Rp 5.000</b><br>
+                    35 Hari : <b>Rp 8.000</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://play-lh.googleusercontent.com/jM8v_V3-3v8X6B7Q-2-6Gg-CHm_unv9m8_TBa9sS6S996uU0B69m5Z6Kk-vj0K8u6" class="app-icon">
+            <div class="info">
+                <span class="app-name">B-Station</span>
+                <div class="price-list">
+                    Sharing (1 Bln) : <b>Rp 5.000</b><br>
+                    3 Bulan : <b>Rp 10.000</b><br>
+                    1 Tahun : <b>Rp 20.000</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://wa.me/628886179455" class="btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> 
+            Order via WhatsApp
+        </a>
+        <a href="https://discordapp.com/users/915234567890123456" target="_blank" class="btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="filter: hue-rotate(180deg);"> 
+            Order via Discord
+        </a>
+    </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAERIN STORE | PREMIUM APP SUBSCRIPTION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+        
+        body {
             /* Menggunakan warna solid pink muda sebagai cadangan jika gambar gagal */
             background-color: #FFD1DC;
             /* Link gambar baru yang lebih stabil */
